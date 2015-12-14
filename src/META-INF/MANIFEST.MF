@@ -1,0 +1,15 @@
+Name: STATS FLEISS KAPPA
+Dialog-Specs: STATS_FLEISS_KAPPA.spd
+Command-Specs: STATS_FLEISS_KAPPA.xml
+Code-Files: STATS_FLEISS_KAPPA.py
+Misc-Files: STATS_FLEISS_KAPPA_DIALOG_HELP.htm,STATS_FLEISS_KAPPA_SYNT
+ AX_HELP.htm,extsyntax.css,IBMdialogicon.png
+Summary: Compute Fleiss Multi-Rater Kappa Statistics
+Description: Provides overall estimate of kappa, along with asymptotic
+  standard error, Z statistic, significance or p value under the null 
+ hypothesis of chance agreement and confidence interval for kappa. Als
+ o provides similar statistics for individual categories.
+Author: David Nichols, IBM SPSS
+Version: 1.1.1
+Product-Version: 19
+Plugins: Python

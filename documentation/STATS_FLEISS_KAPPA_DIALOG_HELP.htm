@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Fleiss Kappa</title>
+<style type="text/css"> 
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+</style>
+</head>
+<body>
+<h1>Fleiss Kappa</h1>
+<p>
+This procedure provides an estimate of kappa across all raters and rating categories, along with asymptotic standard error, Z statistic, significance 
+or p value under the null hypothesis of chance agreement and confidence interval for kappa. (Standard errors are based on Fleiss et al., 1979 and Fleiss
+et al., 2003. Test statistic is based on Fleiss et al., 2003.) Also provides these statistics for individual categories, as well as conditional probabilities 
+for categories, which according to Fleiss (1971, p. 381) are probabilities of a second object being assigned to a category given that the first object was 
+assigned to that category.
+</p>
+<p class="step"><span class="step-glyph">►</span>To run this procedure, from the menus choose:</p>
+<p class="menuselection">&nbsp;Analyze<br>&nbsp;&nbsp;Scale<br>&nbsp;&nbsp;&nbsp;Fleiss Kappa...</p>
+<p class="step"><span class="step-glyph">►</span>Specify at least two Numeric Rating Variables. These cannot be date or time variables. Non-integer values are accepted,
+but will be truncated in the output table for individual category kappas.</p>
+<p>
+Optionally, you can:
+</p>
+<p class="bullet">•&nbsp;Specify confidence interval coverage levels from 50% to 99.999%. 
+The default is 95%.</p>
+
+
+<h2>Additional Features</h2>
+<p>Run the command</p>
+<p class="codeblock">STATS FLEISS KAPPA /HELP.</p>
+<p>to display the entire syntax description.</p>
+
+<h2>Data Considerations</h2>
+<p>Split files are ignored. Case filtering is honored. Cases missing on any specified variable(s) are not used. Weights are accepted but are rounded to integers.</p>
+
+<h2>References</h2>
+<P>
+Fleiss, J. L. (1971). Measuring nominal scale agreement among many raters. <I>Psychological Bulletin, 76</I>(5), 378-382.
+</P>
+
+<P>
+Fleiss, J. L., Nee, J. C. M., & Landis, J. R. (1979). Large sample variance of kappa in the case of different sets of raters. 
+<I>Psychological Bulletin, 86</I>(5), 974-977.
+</P>
+
+<P>
+Fleiss, J. L., Levin, B., & Paik, M. C. (2003). <I>Statistical methods for rates and proportions (3rd ed.)</I>. Hoboken, NJ: John
+Wiley & Sons.
+</P>
+
+<h2>Requirements</h2>
+<p>
+This command requires the Python Essentials.
+For more information, see How to Get Integration
+  Plug-Ins, under Core System &gt; Frequently Asked Questions in
+  the IBM SPSS Statistics Help system.
+</p>
+<br>
+<hr>
+  <p style="font-size:80%;">
+  © Copyright IBM Corp. 1989, 2015</p>
+
+
+</body></html>
