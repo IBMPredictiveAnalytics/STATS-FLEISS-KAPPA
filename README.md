@@ -5,7 +5,7 @@ Compute Fleiss Multi-Rater Kappa Statistics Provides overall estimate of kappa, 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
 
 ---
 Installation intructions
