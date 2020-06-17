@@ -1,9 +1,13 @@
-#Licensed Materials - Property of IBM
-#IBM SPSS Products: Statistics General
-#(c) Copyright IBM Corp. 2009, 2015
-#US Government Users Restricted Rights - Use, duplication or disclosure 
-#restricted by GSA ADP Schedule Contract with IBM Corp.
-
+#/***********************************************************************
+# * Licensed Materials - Property of IBM
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2020
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp.
+# ************************************************************************/
 __author__ = "SPSS, DPN"
 __version__ = "1.1.1"
 
@@ -15,7 +19,7 @@ from spss import CellText
 def Run(args):
     """Execute the STATS FLEISS KAPPA command"""
 
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
 
     oobj = Syntax([
         Template("VARIABLES", subc="",  ktype="existingvarlist", var="variables", islist=True),
@@ -28,7 +32,7 @@ def Run(args):
     except:
         def _(msg):
             return msg
-    if args.has_key("HELP"):
+    if "HELP" in args:
         helper()
     else:
         processcmd(oobj, args, fleisskappaextension)
@@ -46,7 +50,7 @@ def helper():
 
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print(_("Help file not found:") + helpspec)
+        print((_("Help file not found:") + helpspec))
 try:    
     from extension import helper
 except:
@@ -223,9 +227,9 @@ VARSTOCASES
 OMSEND TAG = ['"%s"'].""" % omstag1)
             catdata = []
             try:
-	        cur = spss.Cursor(isBinary=False)
+                   cur = spss.Cursor(isBinary=False)
             except:
-	        cur = spss.Cursor()
+	               cur = spss.Cursor()
             while True:
                 datarow = cur.fetchone()
                 if datarow is None:
@@ -373,9 +377,9 @@ VARIABLE LABELS upper %s. """ % _smartquote(_(upplabel)))
 EXECUTE.
 """)
                 try:
-	            cur = spss.Cursor(isBinary=False)
+	                cur = spss.Cursor(isBinary=False)
                 except:
-	            cur = spss.Cursor()
+	                cur = spss.Cursor()
                 data1=cur.fetchone()
                 cur.close()
                 collabels1=[spss.GetVariableLabel(0),spss.GetVariableLabel(1),spss.GetVariableLabel(2),spss.GetVariableLabel(3), \
@@ -429,9 +433,9 @@ OMS
                 rlabels=[]
                 data2=[]
                 try:
-	            cur = spss.Cursor(isBinary=False)
+	                   cur = spss.Cursor(isBinary=False)
                 except:
-	            cur = spss.Cursor()
+	                   cur = spss.Cursor()
                 for i in range(0,spss.GetCaseCount()):
                     datarow=cur.fetchone()
                     data2.append(datarow[1:])
