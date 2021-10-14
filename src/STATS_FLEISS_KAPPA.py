@@ -3,13 +3,13 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2020
+# * (C) Copyright IBM Corp. 1989, 2021
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp.
 # ************************************************************************/
 __author__ = "SPSS, DPN"
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 
 import tempfile, spss, spssaux, random
 from extension import Template, Syntax, checkrequiredparams, processcmd
@@ -196,7 +196,8 @@ COUNT %s=%s (MISSING).""" % (tmpvar1, varlist))
             spss.Submit(r"""
 SELECT IF %s=0.""" % tmpvar1)
             spss.Submit(r"""
-EXECUTE.""")
+EXECUTE.
+MISSING VALUES ALL ().""")
             validn=spss.GetCaseCount()
             if wtvar == None:
                 spss.Submit(r"""
@@ -227,9 +228,9 @@ VARSTOCASES
 OMSEND TAG = ['"%s"'].""" % omstag1)
             catdata = []
             try:
-                   cur = spss.Cursor(isBinary=False)
+                cur = spss.Cursor(isBinary=False)
             except:
-	               cur = spss.Cursor()
+                cur = spss.Cursor()
             while True:
                 datarow = cur.fetchone()
                 if datarow is None:
@@ -433,9 +434,9 @@ OMS
                 rlabels=[]
                 data2=[]
                 try:
-	                   cur = spss.Cursor(isBinary=False)
+                    cur = spss.Cursor(isBinary=False)
                 except:
-	                   cur = spss.Cursor()
+                    cur = spss.Cursor()
                 for i in range(0,spss.GetCaseCount()):
                     datarow=cur.fetchone()
                     data2.append(datarow[1:])

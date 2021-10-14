@@ -10,7 +10,7 @@ Description: Provides overall estimate of kappa, along with asymptotic
  hypothesis of chance agreement and confidence interval for kappa. Als
  o provides similar statistics for individual categories.
 Author: David Nichols, IBM SPSS
-Version: 2.0.0
+Version: 2.0.1
 Product-Version: 24
 Plugins: Python
 Python-Version: 3
