@@ -17,9 +17,14 @@ Installation intructions
 ---
 Tutorial
 ----
+
 ### Installation Location
 
-Analyze → Scale → Fleiss Kappa 
+Analyze →
+
+&nbsp;&nbsp;Scale →
+
+&nbsp;&nbsp;&nbsp;&nbsp;Fleiss Kappa 
 
 ### UI
 <img width="692" alt="image" src="https://user-images.githubusercontent.com/19230800/193654172-78070471-b510-43a0-ba58-7fc7ea7076f9.png">
@@ -35,7 +40,7 @@ STATS FLEISS KAPPA VARIABLES=salary jobtime
 License
 ----
 
-- Apache 2.0
+- [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
                               
 Contributors
 ----
