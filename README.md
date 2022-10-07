@@ -32,10 +32,16 @@ Analyze →
 ### Syntax
 
 ```
-DATASET ACTIVATE DataSet1.
-STATS FLEISS KAPPA VARIABLES=salary jobtime
+STATS FLEISS KAPPA VARIABLES=nRateSub nRateAv nRateRel nRatePr nRateSc nRateCD nRateSft nRateHD 
+    nRateDoc
  /OPTIONS CILEVEL=95.
 ```
+
+### Output
+
+<img width="732" alt="image" src="https://user-images.githubusercontent.com/19230800/194568234-ef8dd0c4-ef76-494a-8573-8ec14173b3eb.png">
+
+
 ---
 License
 ----
