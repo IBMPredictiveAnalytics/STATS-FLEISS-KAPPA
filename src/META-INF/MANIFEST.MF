@@ -1,4 +1,5 @@
 Name: STATS FLEISS KAPPA
+Display-Name: Fleiss Multi-Rater Kappa
 Dialog-Specs: STATS_FLEISS_KAPPA.spd
 Command-Specs: STATS_FLEISS_KAPPA.xml
 Code-Files: STATS_FLEISS_KAPPA.py
